@@ -21,9 +21,9 @@ interface AppStateContextValue {
   streak: number;
   milestone: number;
   initialize: () => Promise<void>;
-  updateProfile: (profile: Profile) => Promise<void>;
-  addDailyLog: (log: DailyLog) => Promise<void>;
-  addCheer: (cheer: Cheer) => Promise<void>;
+  updateProfile: (_profile: Profile) => Promise<void>;
+  addDailyLog: (_log: DailyLog) => Promise<void>;
+  addCheer: (_cheer: Cheer) => Promise<void>;
   refreshPurchase: () => Promise<void>;
 }
 
