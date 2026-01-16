@@ -5,6 +5,7 @@ import { CheckInScreen } from '../screens/CheckInScreen';
 import { ReflectionScreen } from '../screens/ReflectionScreen';
 import { SupporterScreen } from '../screens/SupporterScreen';
 import { JudgeScreen } from '../screens/JudgeScreen';
+import { AppBuilderScreen } from '../screens/AppBuilderScreen';
 import { colors } from '../theme/colors';
 
 export type MainTabParamList = {
@@ -13,6 +14,7 @@ export type MainTabParamList = {
   Reflection: undefined;
   Judge: undefined;
   Supporter: undefined;
+  Builder: undefined;
 };
 
 const Tab = createBottomTabNavigator<MainTabParamList>();
@@ -39,6 +41,7 @@ export const MainTabs = () => {
       <Tab.Screen name="Reflection" component={ReflectionScreen} options={{ title: 'ふりかえり' }} />
       <Tab.Screen name="Judge" component={JudgeScreen} options={{ title: 'たぶんOK' }} />
       <Tab.Screen name="Supporter" component={SupporterScreen} options={{ title: '応援' }} />
+      <Tab.Screen name="Builder" component={AppBuilderScreen} options={{ title: '作成' }} />
     </Tab.Navigator>
   );
 };
